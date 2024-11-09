@@ -1,0 +1,79 @@
+.card {
+    height: 400px;
+    width: 711px;
+    border-radius: 25px;
+    background-image: url("/public/card.png");
+    background-repeat: no-repeat;
+    background-size: 711px 400px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.card-type {
+    font-size: 46px;
+    padding-left: 47px;
+    padding-top: 21px;
+    letter-spacing: 3px;
+}
+
+.text-white {
+    color: white
+}
+
+.card-bottom{
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    width: 92%;
+    justify-content: space-between;
+}
+
+.card-number {
+    font-size: 34px;
+    font-family: monospace;
+}
+
+.card-validity-text {
+    margin: 0px 3px;
+    font-size: 8px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+}
+
+.card-validity-date {
+    font-size: 26px;
+    letter-spacing: 0px;
+    display: inline-block;
+    font-family: monospace;
+    margin-top: -4px;
+}
+
+.card-holder-name {
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+
+.mastercard-logo{
+    display: flex;
+    position: relative;
+    align-items: end;
+    height: 116px;
+}
+
+.orange{
+    background-color: #E91E24E6;
+    position: absolute;
+    right: 50px;
+}
+
+.yellow{
+    background-color: #F39E1F;
+}
+
+.circle{
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+}
