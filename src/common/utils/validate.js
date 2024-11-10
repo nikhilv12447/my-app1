@@ -1,3 +1,8 @@
+export function getValidateCardHolderName(name) {
+    if (name.length > 0 && name.length <= 35) return name
+    if (name.length === 0) return ""
+    return null
+}
 export function getValidMonths() {
     let month = []
 

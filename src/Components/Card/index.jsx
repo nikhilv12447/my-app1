@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { getValidMonths, getValidYears, getLastTwoDigitsOfCurrentYear, getValidateCardNumber } from "../../common/utils/validate"
+import { getValidMonths, getValidYears, getLastTwoDigitsOfCurrentYear, getValidateCardNumber, getValidateCardHolderName } from "../../common/utils/validate"
 import "./cardStyle.css"
 
 function getModifyNumber(number) {
@@ -29,7 +29,8 @@ function Card() {
     }
 
     function onCardHolderNameChange(e) {
-        setCardHolderName(e.target.value)
+        const value = getValidateCardHolderName(e.target.value)
+        value !== null && setCardHolderName(value)
     }
 
     function onValidMonthChange(e) {
@@ -51,10 +52,11 @@ function Card() {
         </div>
         <div>
             <label htmlFor="validity">Valid Thru: </label>
+            <span> Month </span>
             <select id="validity" onChange={onValidMonthChange}>
                 {getValidMonths().map((month) => <option key={month} value={month} selected={month === validMonth}>{month}</option>)}
-            </select>
-            /
+            </select> /
+            <span> Year </span>
             <select id="validity" onChange={onValidYearChange}>
                 {getValidYears().map((year) => <option key={year} value={year} selected={year === validYear}>{year}</option>)}
             </select>
@@ -69,7 +71,7 @@ function Card() {
                     <div className="card-number">
                         <span>{getModifyNumber(cardNumber)}</span>
                     </div>
-                    <div className="card-validity">
+                    <div>
                         <p className="card-validity-text">VALID THRU</p>
                         <span className="card-validity-date">{validMonth}/{validYear}</span>
                     </div>

@@ -1,3 +1,6 @@
+.text-white {
+    color: white
+}
 .card {
     height: 400px;
     width: 711px;
@@ -16,10 +19,6 @@
     letter-spacing: 3px;
 }
 
-.text-white {
-    color: white
-}
-
 .card-bottom{
     display: flex;
     position: absolute;
@@ -32,6 +31,7 @@
 .card-number {
     font-size: 34px;
     font-family: monospace;
+    height: 40px;
 }
 
 .card-validity-text {
