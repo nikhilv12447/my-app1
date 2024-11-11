@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { getValidMonths, getValidYears, getLastTwoDigitsOfCurrentYear, getValidateCardNumber, getValidateCardHolderName } from "../../common/utils/validate"
+import { describeArc } from "../../common/utils/svgArc"
+import Chip from "../Chip"
+import NFC from "../NFC";
 import "./cardStyle.css"
 
 function getModifyNumber(number) {
@@ -62,10 +65,14 @@ function Card() {
             </select>
         </div>
         <div className="card">
+            <svg className="white-arc" width="1000" height="1000">
+                <path className="" id="arc1" d={describeArc(970, 230, 380, 212, 301)} fill="none" stroke="white" stroke-width="2" />
+            </svg>
             <div className="card-type text-white">
                 world
             </div>
-
+            <NFC />
+            <Chip />
             <div className="card-bottom">
                 <div className="text-white">
                     <div className="card-number">

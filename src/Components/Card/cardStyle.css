@@ -5,11 +5,10 @@
     height: 400px;
     width: 711px;
     border-radius: 25px;
-    background-image: url("/public/card.png");
-    background-repeat: no-repeat;
-    background-size: 711px 400px;
+    background-color: #374353;
     position: relative;
     margin-top: 10px;
+    z-index: -1;
 }
 
 .card-type {
@@ -76,4 +75,10 @@
     width: 75px;
     height: 75px;
     border-radius: 50px;
+}
+
+.white-arc {
+    position: absolute;
+    transform: rotate(-51deg);
+    top: -94px;
 }
